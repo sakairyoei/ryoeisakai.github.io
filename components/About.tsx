@@ -63,40 +63,39 @@ export default function About() {
       </motion.div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
-        {/* Profile Image */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={isVisible ? { opacity: 1, scale: 1 } : {}}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex justify-center lg:justify-start"
-        >
-          <div className="card p-8 flex flex-col items-center gap-4 hover:scale-105 transition-transform duration-300">
-            <div className="w-48 h-48 rounded-2xl overflow-hidden shadow-lg">
-              <img 
-                src="/profile.jpg" 
-                alt="酒井了瑛" 
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <h3 className="text-2xl font-bold text-gray-900">酒井 了瑛</h3>
-            <p className="text-sm text-gray-600">Ryoei Sakai</p>
-          </div>
-        </motion.div>
+      {/* Profile Image */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={isVisible ? { opacity: 1, scale: 1 } : {}}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="flex flex-col items-center lg:items-start gap-6 lg:sticky lg:top-24"
+      >
+        <div className="text-center lg:text-left w-full">
+          <h3 className="text-3xl font-bold text-gray-900 mb-1">酒井 了瑛</h3>
+          <p className="text-base text-gray-600">Ryoei Sakai</p>
+        </div>
+        <div className="w-80 h-80 rounded-3xl overflow-hidden shadow-2xl">
+          <img 
+            src="/profile.jpg" 
+            alt="酒井了瑛" 
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </motion.div>
 
-        {/* About Text */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isVisible ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="lg:col-span-2 space-y-6"
-        >
-          <p className="text-lg text-gray-800 leading-relaxed font-medium">
-            東京通信大学情報マネジメント学部を卒業後、株式会社DTSにて製造業向けERPパッケージ「mcframe」のコンサルタントとして、要件定義から運用まで幅広いフェーズを経験してまいりました。
-          </p>
-          <p className="text-gray-600 leading-relaxed">
-            現在は、<strong className="text-primary-600">AIを活用したDXコンサルティング</strong>を専門領域として、企業の業務効率化とデジタル変革を支援しています。特にPower Platformを用いた業務自動化やAI導入支援において、技術的知見とビジネス理解を兼ね備えた提案が強みです。
-          </p>
-
+      {/* About Text */}
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={isVisible ? { opacity: 1, y: 0 } : {}}
+        transition={{ duration: 0.6, delay: 0.4 }}
+        className="lg:col-span-2 space-y-6 lg:pt-24"
+      >
+        <p className="text-lg text-gray-800 leading-relaxed font-medium">
+          東京通信大学情報マネジメント学部を卒業後、株式会社DTSにて製造業向けERPパッケージ「mcframe」のコンサルタントとして、要件定義から運用まで幅広いフェーズを経験。
+        </p>
+        <p className="text-gray-600 leading-relaxed">
+          現在は、<strong className="text-primary-600">AIを活用したDXコンサルティング</strong>を専門領域として、企業の業務効率化とデジタル変革を支援しています。特にPower Platformを用いた業務自動化やAI導入支援において、技術的知見とビジネス理解を兼ね備えた提案が強みです。
+        </p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
             <div className="flex items-center gap-2 text-gray-600">
               <span className="text-xl">📍</span>
